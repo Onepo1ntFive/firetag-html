@@ -1,0 +1,114 @@
+.l-footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+//
+.footer {
+    margin: auto;
+    max-width: 92rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__contacts {
+        order: 1;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 5rem;
+            order: 0;
+        }
+    }
+    &__social {
+        padding-bottom: 3rem;
+        display: none;
+        text-align: right;
+
+        @media (min-width: $breakpoint-desktop) {
+            display: block;
+        }
+
+        a {
+            margin-left: 1rem;
+            transition: opacity 0.2s ease-in-out;
+        }
+        a:hover {
+            opacity: 0.5;
+        }
+    }
+    &__line {
+        padding-bottom: 3rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        order: 0;
+        
+        @media (min-width: $breakpoint-tablet) {
+            order: 3;
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            align-items: center;
+        }
+    }
+}
+//
+.footer-projects {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: auto;
+    max-width: 105rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    a {
+        margin-bottom: 2.5rem;
+        position: relative;
+        width: 20%;
+        text-align: center;
+        
+        @media (min-width: $breakpoint-desktop) {
+            width: 10%;
+            max-width: 6rem;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    ins {
+        display: block;
+        text-decoration: none;
+        height: 7rem;
+        line-height: 6rem;
+    }
+    span {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        line-height: 1.2;
+        font-size: 0.8rem;
+        color: #6d6d6d;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 1.2rem;
+        }
+    }
+}

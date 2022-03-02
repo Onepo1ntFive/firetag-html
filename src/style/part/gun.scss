@@ -1,0 +1,144 @@
+.gun {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: auto;
+    max-width: 92rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 7rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 10rem;
+    }
+
+    &__text:first-child {
+        h2 {
+            @media (min-width: $breakpoint-desktop) {
+                font-size: 4.6rem;
+            }
+        }
+    }
+    &__gun {
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 5rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-bottom: 10rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 15rem;
+        }
+    }
+    &__pic {
+        margin-top: -15%;
+        position: relative;
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 0;
+            width: 40%;
+        }
+
+        &-laser {
+            padding-top: 50%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(0%);
+            width: 500rem;
+            z-index: -1;
+
+            @media (min-width: $breakpoint-mobile-extra) {
+                padding-top: 45%;
+                transform: translateX(-2%);
+            }
+            @media (min-width: $breakpoint-tablet) {
+                padding-top: 77%;
+                transform: translateX(20%);
+            }
+            @media (min-width: $breakpoint-tablet) {
+                padding-top: 77%;
+                transform: translateX(4%);
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-bottom: 1px solid $color-red;
+                animation: laser 3s ease-in-out 1s forwards infinite;
+            }
+
+            @keyframes laser {
+                0% {
+                    left: 0;
+                    width: 0;
+                }
+                70% {
+                    left: 100%;
+                    width: 100%;
+                }
+                100% {
+                    left: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        img {
+            margin-left: -140%;
+            pointer-events: none;
+            max-width: 300%;
+
+            @media (min-width: $breakpoint-tablet) {
+                margin-left: 0;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 470%;
+            }
+        }
+    }
+    &__content {
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-top: 40%;
+            width: 60%;
+        }
+
+        p {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__video {
+        padding-top: 3rem;
+
+        a {
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: $color-orange;
+        }
+        img {
+            margin-right: 1.5rem;
+            background-color: $color-orange;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                background-color: $color-gray;
+            }
+        }
+    }
+}

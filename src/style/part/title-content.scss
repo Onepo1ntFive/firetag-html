@@ -1,0 +1,40 @@
+.title-content {
+    margin: auto;
+    max-width: 92rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__title {
+        @media (min-width: $breakpoint-tablet) {
+            width: 30rem;
+        }
+
+        & > h1,
+        & > h2 {
+            margin-bottom: 2.5em;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            color: $color-orange !important;
+        }
+    }
+    &__content {
+        @media (min-width: $breakpoint-tablet) {
+            width: calc(100% - 30rem);
+        }
+    }
+
+    &--block {
+        display: block;
+    }
+
+    &--block &__title {
+        width: auto;
+    }
+    &--block &__content {
+        width: auto;
+    }
+}

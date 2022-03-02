@@ -1,0 +1,98 @@
+.contacts {
+    &__title {
+        padding-bottom: 1rem;
+        color: $color-white-50p;
+    }
+    &__contacts {
+        padding-bottom: 2.5rem;
+        font-size: 2.4rem;
+        vertical-align: middle;
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 2.8rem;
+        }
+
+        span {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: none;
+            font-size: 5rem;
+            line-height: 0;
+            color: $color-orange;
+            position: relative;
+            top: 0.1em;
+
+            @media (min-width: $breakpoint-desktop) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__managers {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__manager {
+        padding-bottom: 3rem;
+        width: 100%;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 0;
+            width: 50%;
+        }
+
+        p {
+            padding-bottom: 0.5rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        a[href^='mailto:'] {
+            color: $color-orange;
+        }
+
+        &-name {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border-bottom: 1px solid $color-gray-40p;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            span {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &--footer {
+        text-align: center;
+        @media (min-width: $breakpoint-tablet) {
+            text-align: left;
+        }
+    }
+    &--footer &__title {
+        font-size: 2rem;
+        color: $color-white;
+        
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 2.4rem;
+        }
+    }
+    &--footer &__manager {
+        @media (min-width: $breakpoint-tablet) {
+            max-width: 25rem;
+        }
+    }
+    &--footer &__contacts {
+        span {
+            color: $color-white;
+        }
+    }
+}
