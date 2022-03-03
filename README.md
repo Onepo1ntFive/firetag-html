@@ -1,4 +1,4 @@
-# krepkieteplici-html
+# firetag-html
 
 `npm i`
 
