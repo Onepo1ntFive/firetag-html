@@ -10552,9 +10552,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 
   var menuItems = document.querySelectorAll('.js-menu-item ins');
   var menuSubMenu = null;
+  var menuItem = null;
   Array.prototype.forEach.call(menuItems, function (el, i) {
     el.addEventListener('click', function (event) {
-      menuSubMenu = event.target.parentNode.parentNode.querySelector('.js-menu-next');
+      menuItem = event.target.parentNode.parentNode;
+      menuSubMenu = menuItem.querySelector('.js-menu-next');
+      menuItem.classList.toggle('active');
       slideToggle(menuSubMenu);
     });
   });
