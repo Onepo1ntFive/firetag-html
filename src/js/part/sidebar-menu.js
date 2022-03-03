@@ -38,9 +38,13 @@
     // menu
     const menuItems = document.querySelectorAll('.js-menu-item ins');
     let menuSubMenu = null;
+    let menuItem = null;
     Array.prototype.forEach.call(menuItems, function (el, i) {
         el.addEventListener('click', (event) => {
-            menuSubMenu = event.target.parentNode.parentNode.querySelector('.js-menu-next')
+            menuItem = event.target.parentNode.parentNode;
+            menuSubMenu = menuItem.querySelector('.js-menu-next')
+
+            menuItem.classList.toggle('active')
             slideToggle(menuSubMenu);
         });
     });

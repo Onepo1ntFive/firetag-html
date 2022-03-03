@@ -12,8 +12,11 @@
             font-size: 2.8rem;
         }
 
+        a {
+            padding-right: 1rem;
+        }
+
         span {
-            padding-left: 1rem;
             padding-right: 1rem;
             display: none;
             font-size: 5rem;
@@ -22,7 +25,7 @@
             position: relative;
             top: 0.1em;
 
-            @media (min-width: $breakpoint-desktop) {
+            @media (min-width: $breakpoint-tablet) {
                 display: inline-block;
             }
         }
@@ -80,12 +83,14 @@
     &--footer &__title {
         font-size: 2rem;
         color: $color-white;
-        
+
         @media (min-width: $breakpoint-tablet) {
             font-size: 2.4rem;
         }
     }
     &--footer &__manager {
+        color: $color-white;
+
         @media (min-width: $breakpoint-tablet) {
             max-width: 25rem;
         }

@@ -4,7 +4,6 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-color: $color-black;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -22,12 +21,19 @@
 /*----------*/
 .l-content {
     padding-top: 3rem;
-    padding-bottom: 3rem;
     flex: 1 auto;
 
     @media (min-width: $breakpoint-tablet) {
         padding-top: 5rem;
-        padding-bottom: 5rem;
+    }
+
+    &--black {
+        background-color: $color-black;
+        color: $color-white;
+
+        h1, h2 {
+            color: $color-white;
+        }
     }
 
     .content__wrap {
@@ -60,5 +66,6 @@
 }
 /*----------*/
 .l-footer {
+    background-color: $color-black;
 }
 /*----------*/

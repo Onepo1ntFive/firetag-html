@@ -216,4 +216,20 @@
             }
         }
     }
+
+    &--header {
+        height: auto;
+    }
+    &--header  &__header {
+        position: static;
+    }
+    &--header &__btn {
+        border: 1px solid $color-gray;
+        background: none;
+        color: $color-black;
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
 }

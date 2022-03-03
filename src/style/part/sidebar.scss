@@ -230,10 +230,14 @@
             width: 3rem;
             height: 3rem;
             background: url('../img/chevron-down-black.svg') 50% 50% no-repeat;
+            transition: transform 0.2s ease-in-out;
 
             &:hover {
                 opacity: 0.75;
             }
+        }
+        &.active ins {
+            transform: rotate(-180deg);
         }
         a {
             display: block;

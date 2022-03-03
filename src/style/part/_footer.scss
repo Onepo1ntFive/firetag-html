@@ -13,10 +13,17 @@
 }
 //
 .footer {
+    padding-top: 5rem;
     margin: auto;
     max-width: 92rem;
     display: flex;
     flex-flow: column nowrap;
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 7rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 10rem;
+    }
 
     &__contacts {
         order: 1;

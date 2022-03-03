@@ -1,0 +1,86 @@
+.details-page {
+    margin-bottom: 5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 7rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 10rem;
+    }
+    &__header {
+        margin: 0 auto 5rem;
+        max-width: 102.4rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-bottom: 6rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 8rem;
+        }
+
+        h1 {
+            line-height: 1.1;
+            width: 100%;
+            letter-spacing: 0.015em;
+        }
+
+        &-item {
+            padding-bottom: 2rem;
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: bold;
+            
+            @media (min-width: $breakpoint-tablet) {
+                padding-bottom: 0;
+                width: 50%;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                width: 33.33%;
+            }
+
+            strong {
+                display: block;
+                font-weight: normal;
+            }
+        }
+    }
+    &__pic {
+        margin: auto;
+        max-width: 102.4rem;
+        padding-bottom: 6rem;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+    &__content {
+        margin: auto;
+        max-width: 77rem;
+
+        p {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            & + h2,
+            & + h3 {
+                padding-top: 3rem;
+            }
+        }
+
+        picture {
+            padding-top: 2rem;
+            margin-bottom: 3rem;
+            display: block;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

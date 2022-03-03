@@ -1,0 +1,21 @@
+.pagenotfound {
+    height: 60rem;
+    max-height: 50vh;
+    display: flex;
+    flex-flow: column nowrap;   
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        max-width: 56rem;
+        text-align: center;
+
+        p {
+            margin-bottom: 1.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
