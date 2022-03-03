@@ -39,7 +39,7 @@
 
         @media (min-width: $breakpoint-tablet) {
             margin-top: -10%;
-            width: 40%;
+            width: 30rem;
         }
 
         &-laser {
@@ -57,11 +57,11 @@
                 transform: translateX(-2%);
             }
             @media (min-width: $breakpoint-tablet) {
-                padding-top: 77%;
-                transform: translateX(20%);
+                padding-top: 71%;
+                transform: translateX(4%);
             }
-            @media (min-width: $breakpoint-tablet) {
-                padding-top: 77%;
+            @media (min-width: $breakpoint-desktop) {
+                padding-top: 95%;
                 transform: translateX(4%);
             }
             &::before {
@@ -72,7 +72,7 @@
                 bottom: 0;
                 left: 0;
                 border-bottom: 1px solid $color-red;
-                animation: laser 3s ease-in-out 1s forwards infinite;
+                animation: laser 2s ease-in-out 0.5s forwards infinite;
             }
 
             @keyframes laser {
@@ -102,8 +102,12 @@
                 top: 0;
                 left: 50%;
                 transform: translateX(-50%);
-                max-width: 470%;
+                max-width: 422%;
             }
+            @media (min-width: $breakpoint-desktop) {
+                max-width: 572%;
+            }
+            
         }
     }
     &__content {
@@ -111,7 +115,7 @@
 
         @media (min-width: $breakpoint-tablet) {
             padding-top: 30%;
-            width: 60%;
+            width: calc(100% - 30rem);
         }
 
         p {

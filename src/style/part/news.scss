@@ -90,4 +90,14 @@
             }
         }
     }
+    &__all {
+        a {
+            color: $color-orange;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
 }
