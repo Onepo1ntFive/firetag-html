@@ -1,14 +1,11 @@
 /*--------------------*/
 .scenario {
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 92rem;
 
-    @media (min-width: $breakpoint-tablet) {
-        padding-bottom: 7rem;
-    }
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-mobile-extra) {
         padding-bottom: 10rem;
     }
 
@@ -18,17 +15,24 @@
         display: flex;
         flex-flow: row wrap;
     }
-    &__nav {
-        margin-bottom: 3rem;
+    &__block {
         padding-left: 4rem;
         padding-right: 4rem;
         width: 100%;
+        @media (min-width: $breakpoint-tablet-extra) {
+            width: 50%;
+        }
+    }
+
+    &__nav {
+        margin-bottom: 3rem;
+        width: 100%;
         position: relative;
         z-index: 1;
- 
+    
 
-        @media (min-width: $breakpoint-tablet) {
-            margin-bottom: 0;
+        @media (min-width: $breakpoint-mobile-extra) {
+            margin-bottom: 1rem;
             overflow: auto;
             white-space: nowrap;
         }
@@ -37,7 +41,6 @@
             display: block;
             white-space: inherit;
             overflow: visible;
-            width: 50%;
         }
     }
     &__nav-title {
@@ -46,25 +49,25 @@
         text-transform: uppercase;
         color: $color-orange;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             padding-bottom: 4rem;
         }
     }
     &__nav-item {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         margin-right: 3rem;
         cursor: pointer;
         font-size: 2rem;
         color: $color-gray;
         transition-property: color;
         transition-duration: 0.2s;
+        display: block;
         transition-timing-function: ease-in-out;
-
+        
         &:last-child {
             margin-right: 0;
         }
-
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             display: inline-block;
         }
         @media (min-width: $breakpoint-tablet-extra) {
@@ -168,18 +171,6 @@
 
         @media (min-width: $breakpoint-tablet-extra) {
             width: 50%;
-        }
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: -1000%;
-            right: -1000%;
-            bottom: 0;
-            z-index: -1;
-            background-color: $color-gray;
         }
     }
     &__item {

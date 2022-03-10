@@ -57,11 +57,15 @@
         padding: 0 300rem;
         background-color: $color-white;
         color: $color-black;
+        position: relative;
+        z-index: 1;
     }
     .content__wrap-gray {
         margin: 0 -300rem;
         padding: 0 300rem;
         background-color: $color-white-10p;
+        position: relative;
+        z-index: 1;
     }
 }
 /*----------*/

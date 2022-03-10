@@ -1,27 +1,43 @@
 .title-content {
     margin: auto;
     max-width: 92rem;
+    font-size: 1.4rem;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-mobile-extra) {
         display: flex;
         flex-flow: row wrap;
     }
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1.7rem;
+    }
 
     &__title {
+        @media (min-width: $breakpoint-mobile-extra) {
+            padding-right: 2rem;
+            width: 25rem;
+        }
         @media (min-width: $breakpoint-tablet) {
             width: 30rem;
         }
 
         & > h1,
         & > h2 {
-            margin-bottom: 2.5em;
+            margin-bottom: 2em;
             font-weight: normal;
             text-transform: uppercase;
             font-size: 1.7rem;
             color: $color-orange !important;
+
+            @media (min-width: $breakpoint-mobile-extra) {
+ margin-bottom: 2.5em;
+            }
         }
+        
     }
     &__content {
+        @media (min-width: $breakpoint-mobile-extra) {
+            width: calc(100% - 25rem);
+        }
         @media (min-width: $breakpoint-tablet) {
             width: calc(100% - 30rem);
         }
@@ -36,5 +52,39 @@
     }
     &--block &__content {
         width: auto;
+    }
+
+    &--margin {
+        padding-bottom: 5rem;
+
+        @media (min-width: $breakpoint-mobile-extra) {
+            padding-bottom: 10rem;
+        }
+    }
+    &--map {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            z-index: -1;
+            background: url('../img/numbers-map.svg') 50% 50%;
+            width: 200%;
+            height: 150%;
+            background-size: contain;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+
+            @media (min-width: $breakpoint-mobile-extra) {
+                display: block;
+            }
+            @media (min-width: $breakpoint-tablet-extra) {
+                display: none;
+            }
+        }
     }
 }

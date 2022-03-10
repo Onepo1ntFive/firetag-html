@@ -1,11 +1,9 @@
 .inside {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 7rem;
     max-width: 92rem;
     margin: auto;
-
-    @media (min-width: $breakpoint-tablet) {
-        padding-top: 7rem;
+    
+    @media (min-width: $breakpoint-mobile-extra) {
         padding-bottom: 7rem;
     }
     @media (min-width: $breakpoint-desktop) {
@@ -25,6 +23,12 @@
         }
     }
     &__collapse {
+        display: none;
+
+        @media (min-width: $breakpoint-tablet-extra) {
+            display: block;
+        }
+
         &-title {
             padding-right: 4rem;
             padding-top: 2rem;
@@ -69,7 +73,7 @@
                 }
             }
             &:hover {
-                color: $color-orange
+                color: $color-orange;
             }
             &.active {
                 border-bottom-color: transparent;

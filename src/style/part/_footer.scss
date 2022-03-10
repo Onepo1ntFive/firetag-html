@@ -18,17 +18,15 @@
     max-width: 92rem;
     display: flex;
     flex-flow: column nowrap;
-    @media (min-width: $breakpoint-tablet) {
-        padding-top: 7rem;
-    }
-    @media (min-width: $breakpoint-desktop) {
+
+    @media (min-width: $breakpoint-mobile-extra) {
         padding-top: 10rem;
     }
 
     &__contacts {
         order: 1;
-        
-        @media (min-width: $breakpoint-tablet) {
+
+        @media (min-width: $breakpoint-tablet-extra) {
             padding-bottom: 5rem;
             order: 0;
         }
@@ -38,7 +36,7 @@
         display: none;
         text-align: right;
 
-        @media (min-width: $breakpoint-desktop) {
+        @media (min-width: $breakpoint-tablet-extra) {
             display: block;
         }
 
@@ -56,8 +54,8 @@
         flex-flow: row nowrap;
         justify-content: center;
         order: 0;
-        
-        @media (min-width: $breakpoint-tablet) {
+
+        @media (min-width: $breakpoint-mobile-extra) {
             order: 3;
             justify-content: space-between;
             padding-bottom: 0;
@@ -87,7 +85,7 @@
         position: relative;
         width: 20%;
         text-align: center;
-        
+
         @media (min-width: $breakpoint-desktop) {
             width: 10%;
             max-width: 6rem;
@@ -114,7 +112,7 @@
         font-size: 0.8rem;
         color: #6d6d6d;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             font-size: 1.2rem;
         }
     }

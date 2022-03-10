@@ -1,12 +1,9 @@
 .news {
-    padding: 5rem 0;
+    padding: 7rem 0;
     max-width: 100rem;
     margin: auto;
 
-    @media (min-width: $breakpoint-tablet) {
-        padding: 7rem 0;
-    }
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-mobile-extra) {
         padding: 10rem 0;
     }
 
@@ -35,9 +32,9 @@
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         padding-bottom: 4rem;
-     
+
         width: 100%;
-       
+
         @media (min-width: $breakpoint-tablet) {
             padding-bottom: 6rem;
             width: 50%;
@@ -80,7 +77,7 @@
             font-size: 1.4rem;
             text-transform: uppercase;
             transition: color 0.2s ease-in-out;
-            
+
             @media (min-width: $breakpoint-tablet) {
                 font-size: 1.7rem;
             }
@@ -91,6 +88,8 @@
         }
     }
     &__all {
+        padding-top: 3rem;
+
         a {
             color: $color-orange;
             transition: color 0.2s ease-in-out;

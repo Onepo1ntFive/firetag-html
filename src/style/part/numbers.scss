@@ -5,20 +5,22 @@
     position: relative;
     z-index: 1;
     color: $color-black;
+    display: none;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-extra) {
         padding-top: 5%;
         padding-bottom: 6%;
+        display: block;
     }
     & > img {
         position: absolute;
-        top: 50%;
-        left: -15px;
+        top: 80%;
+        left: 48%;
         z-index: -1;
-        width: calc(100% + 3rem);
+        width: calc(100% + 10rem);
         height: calc(200% - 4rem);
         max-height: 68rem;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         pointer-events: none;
 
         @media (min-width: $breakpoint-tablet) {
@@ -45,7 +47,7 @@
         @media (min-width: $breakpoint-tablet) {
             width: 33.33%;
         }
-        @media (min-width: $breakpoint-desktop) {
+        @media (min-width: $breakpoint-tablet-extra) {
             width: auto;
         }
         img {

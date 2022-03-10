@@ -1,14 +1,9 @@
 .benefits {
-    background-color: $color-white;
     color: $color-black;
     padding-top: 5rem;
     padding-bottom: 5rem;
 
-    @media (min-width: $breakpoint-tablet) {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
-    }
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-mobile-extra) {
         padding-top: 10rem;
         padding-bottom: 10rem;
     }

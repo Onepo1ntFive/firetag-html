@@ -67,6 +67,7 @@
             border-bottom: 1px solid $color-gray-40p;
             font-weight: 500;
             text-transform: uppercase;
+            color: $color-white;
 
             span {
                 color: $color-gray;
@@ -76,7 +77,7 @@
 
     &--footer {
         text-align: center;
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             text-align: left;
         }
     }
@@ -84,14 +85,14 @@
         font-size: 2rem;
         color: $color-white;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             font-size: 2.4rem;
         }
     }
     &--footer &__manager {
         color: $color-white;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-mobile-extra) {
             max-width: 25rem;
         }
     }

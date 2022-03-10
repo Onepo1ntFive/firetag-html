@@ -1,6 +1,6 @@
 .gun-benefits {
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     max-width: 102.4rem;
 
     @media (min-width: $breakpoint-tablet) {
@@ -11,8 +11,12 @@
     }
 
     &__pic {
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
         display: block;
+        
+        @media (min-width: $breakpoint-mobile-extra) {
+            padding-bottom: 6rem;
+        }
 
         img {
             max-width: 100%;
@@ -30,11 +34,18 @@
         padding-bottom: 4rem;
         border-top: 1px solid $color-white-30p;
 
-        @media (min-width: $breakpoint-tablet) {
-            border-top: 1px solid $color-white;
-            width: calc(50% - 5rem);
+        &:first-child {
+            @media (max-width: calc(#{$breakpoint-mobile-extra} - 1px)) {
+                border-top: 0;
+                padding-top: 0;
+            }
         }
-        @media (min-width: $breakpoint-desktop) {
+
+        @media (min-width: $breakpoint-mobile-extra) {
+            width: calc(50% - 5rem);
+            border-top: 1px solid $color-white;
+        }
+        @media (min-width: $breakpoint-tablet) {
             width: calc(33.33% - 5rem);
         }
     }

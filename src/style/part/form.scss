@@ -1,12 +1,8 @@
 .form {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    padding-bottom: 7rem;
+    padding-top: 7rem;
 
-    @media (min-width: $breakpoint-tablet) {
-        padding-bottom: 7rem;
-        padding-top: 7rem;
-    }
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-mobile-extra) {
         padding-bottom: 10rem;
         padding-top: 10rem;
     }
@@ -58,8 +54,12 @@
             border-width: 0 0 1px;
             font-weight: bold;
             line-height: 1;
-            font-size: 3.2rem;
+            font-size: 1.7rem;
             width: 100%;
+            
+            @media (min-width: $breakpoint-tablet-extra) {
+                font-size: 3.2rem;
+            }
         }
     }
 }

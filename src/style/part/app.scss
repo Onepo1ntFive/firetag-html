@@ -26,11 +26,15 @@ body {
     font-family: $font-family;
     line-height: 1.5;
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: $color-font;
     letter-spacing: 0.025em;
     -webkit-backface-visibility: hidden;
     -webkit-text-size-adjust: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1.7rem;
+    }
 }
 sup {
     vertical-align: super;
@@ -126,7 +130,7 @@ button.b-button {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.5rem;
-    color: $color-black;
+    color: $color-white;
     transition-property: background, color;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
